@@ -1,0 +1,27 @@
+{
+    "name": "umpirsky/locurro",
+    "type": "library",
+    "description": "Local currency converter.",
+    "license": "propertary",
+    "authors": [
+        {
+            "name": "Saša Stamenković",
+            "email": "umpirsky@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~5.4",
+        "willdurand/geocoder": "^3.0",
+        "florianv/swap": "^2.2",
+        "zf1/zend-locale": "^1.12"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.2"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Locurro\\": "src/" }
+    }
+}
