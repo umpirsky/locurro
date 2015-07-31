@@ -13,7 +13,8 @@
         "php": "~5.4",
         "willdurand/geocoder": "^3.0",
         "florianv/swap": "^2.2",
-        "zf1/zend-locale": "^1.12"
+        "zf1/zend-locale": "^1.12",
+        "mathiasverraes/money": "^1.2"
     },
     "require-dev": {
         "phpspec/phpspec": "^2.2"
