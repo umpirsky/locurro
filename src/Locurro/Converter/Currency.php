@@ -17,17 +17,18 @@ class Currency
         $this->swap = $swap;
     }
 
-    public function convert(Money $money, $currency)
+    // TODO: returns same currency, needs fix
+    public function convert(Money $money, $target)
     {
-        if (!$currency instanceof MoneyCurrency) {
+        if (!$target instanceof MoneyCurrency) {
             throw new InvalidArgumentException(sprintf(
                 'Second argument must be Currency, %s given.',
-                gettype($currency)
+                gettype($target)
             ));
         }
 
         $rate = $this->swap->quote(
-            new CurrencyPair($money->getCurrency(), $currency)
+            new CurrencyPair($money->getCurrency(), $target)
         );
 
         return $money->multiply(
