@@ -15,7 +15,8 @@
         "florianv/swap": "^2.2",
         "zf1/zend-locale": "^1.12",
         "mathiasverraes/money": "^1.2",
-        "geoip2/geoip2": "^2.3"
+        "geoip2/geoip2": "^2.3",
+        "doctrine/cache": "^1.4"
     },
     "require-dev": {
         "phpspec/phpspec": "^2.2"
