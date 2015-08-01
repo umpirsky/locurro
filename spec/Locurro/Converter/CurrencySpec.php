@@ -23,6 +23,7 @@ class CurrencySpec extends ObjectBehavior
 
     function it_converts_money(SwapInterface $swap, Money $money, Currency $currency)
     {
+        $money->getAmount()->willReturn(5);
         $money->getCurrency()->willReturn($currency);
         $money->multiply(5)->willReturn($money);
 
@@ -35,6 +36,7 @@ class CurrencySpec extends ObjectBehavior
 
     function it_converts_money_based_on_given_currency(SwapInterface $swap, Money $money, Currency $currency)
     {
+        $money->getAmount()->willReturn(5);
         $money->getCurrency()->willReturn($currency);
         $money->multiply(5)->willReturn($money);
 
@@ -51,7 +53,7 @@ class CurrencySpec extends ObjectBehavior
         $money->getCurrency()->willReturn($from);
         $money->multiply(120.3971)->willReturn($converted);
 
-        $converted->getAmount()->willReturn(12039.71);
+        $converted->getAmount()->willReturn(12039);
         $converted->getCurrency()->willReturn($to);
 
         $from->__toString()->willReturn('EUR');
@@ -61,6 +63,6 @@ class CurrencySpec extends ObjectBehavior
 
         $swap->quote('EUR/RSD')->shouldBeCalled()->willReturn($rate);
 
-        $this->convert($money, $to)->shouldBeEqualTo($converted);
+        $this->convert($money, $to)->getAmount()->shouldBe(12039);
     }
 }

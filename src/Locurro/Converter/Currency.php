@@ -17,7 +17,6 @@ class Currency
         $this->swap = $swap;
     }
 
-    // TODO: returns same currency, needs fix
     public function convert(Money $money, $target)
     {
         if (!$target instanceof MoneyCurrency) {
@@ -31,8 +30,11 @@ class Currency
             new CurrencyPair($money->getCurrency(), $target)
         );
 
-        return $money->multiply(
-            (float) $rate->getValue()
+        return new Money(
+            $money->multiply(
+                (float) $rate->getValue()
+            )->getAmount(),
+            $target
         );
     }
 }
