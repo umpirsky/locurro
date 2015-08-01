@@ -6,8 +6,7 @@ use Locurro\Exception\InvalidLocaleException;
 use Money\Currency as MoneyCurrency;
 use Money\Money;
 
-// TODO: interface
-class Locale
+class Locale implements ConverterInterface
 {
     private $converter;
 

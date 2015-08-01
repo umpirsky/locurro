@@ -21,6 +21,11 @@ class CurrencySpec extends ObjectBehavior
         $this->shouldHaveType('Locurro\Converter\Currency');
     }
 
+    function it_implements_currency_converter_interface()
+    {
+        $this->shouldImplement('Locurro\Converter\ConverterInterface');
+    }
+
     function it_converts_money(SwapInterface $swap, Money $money, Currency $currency)
     {
         $money->getAmount()->willReturn(5);

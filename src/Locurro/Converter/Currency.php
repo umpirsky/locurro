@@ -8,7 +8,7 @@ use Money\Money;
 use Swap\Model\CurrencyPair;
 use Swap\SwapInterface;
 
-class Currency
+class Currency implements ConverterInterface
 {
     private $swap;
 

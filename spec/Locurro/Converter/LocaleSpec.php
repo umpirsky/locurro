@@ -15,6 +15,11 @@ class LocaleSpec extends ObjectBehavior
         $this->beConstructedWith($currencyConverter);
     }
 
+    function it_implements_currency_converter_interface()
+    {
+        $this->shouldImplement('Locurro\Converter\ConverterInterface');
+    }
+
     function it_is_initializable()
     {
         $this->shouldHaveType('Locurro\Converter\Locale');
@@ -24,7 +29,7 @@ class LocaleSpec extends ObjectBehavior
     {
         $currencyConverter->convert($money, Argument::any())->shouldBeCalled()->willReturn($converted);
 
-        $this->convert($money, 'sr-Cyrl-RS')->shouldBeEqualTo($converted);
+        $this->convert($money, 'sr_Cyrl_RS')->shouldBeEqualTo($converted);
     }
 
     function it_throws_exception_if_locale_is_invalid(CurrencyConverter $currencyConverter, Money $money)
