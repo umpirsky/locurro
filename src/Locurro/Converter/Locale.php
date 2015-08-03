@@ -27,16 +27,19 @@ class Locale implements ConverterInterface
 
     private function getCurrencyCode($locale)
     {
-        $currencyCode = (new \NumberFormatter(
-            $locale,
-            \NumberFormatter::CURRENCY
-        ))->getTextAttribute(\NumberFormatter::CURRENCY_CODE);
-
-        if (empty($currencyCode)) {
+        try {
+            $currencyCode = (new \Zend_Currency(null, $locale))->getShortName();
+            if (null === $currencyCode) {
+                throw new InvalidLocaleException(sprintf(
+                    'Cannot find currency for "%s" locale.',
+                    $locale
+                ));
+            }
+        } catch (\Exception $e) {
             throw new InvalidLocaleException(sprintf(
                 'Cannot find currency for "%s" locale.',
                 $locale
-            ));
+            ), $e->getCode(), $e);
         }
 
         return $currencyCode;

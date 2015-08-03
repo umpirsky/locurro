@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a63fa55c8a8a97ef6efc325b3a65c0c7",
+    "hash": "47181cb9b645ff41b9344f8f712cbd87",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -655,6 +655,45 @@
                 "zend"
             ],
             "time": "2015-04-30 11:07:42"
+        },
+        {
+            "name": "zf1/zend-currency",
+            "version": "1.12.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zf1/zend-currency.git",
+                "reference": "da0d1449653b705b5c86ab1a2763d9abb88e33f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zf1/zend-currency/zipball/da0d1449653b705b5c86ab1a2763d9abb88e33f5",
+                "reference": "da0d1449653b705b5c86ab1a2763d9abb88e33f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.11",
+                "zf1/zend-exception": "self.version",
+                "zf1/zend-locale": "self.version"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zend_Currency": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Zend Framework 1 Currency package",
+            "homepage": "http://framework.zend.com/",
+            "keywords": [
+                "ZF1",
+                "currency",
+                "framework",
+                "zend"
+            ],
+            "time": "2015-04-30 11:08:48"
         },
         {
             "name": "zf1/zend-exception",
