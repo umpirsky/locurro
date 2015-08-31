@@ -4,14 +4,16 @@
 
 ## Use Case
 
-Imagine you have an online store, and you are selling goods in many different countries.
-Some of your buyers might live in countrie that uses currency other then one you use in your store.
+Imagine you have an online store, and you are selling products in many different countries.
+Some of your buyers might live in country that uses currency other then one you use in your store.
 It would be cool to give them estimation of product costs in their domestic currency.
 
 Here is one example of showing approximate price under the brackets:
 
 ![us](img/us.png)
 ![fr](img/fr.png)
+
+Pretty cool, huh? :smile:
 
 ## Basic Usage
 
