@@ -1,4 +1,4 @@
-# Locurro
+# Locurro [![Build Status](https://travis-ci.org/umpirsky/locurro.svg)](https://travis-ci.org/umpirsky/locurro)
 
 :euro: Local currency converter.
 
