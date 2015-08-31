@@ -15,12 +15,15 @@
         "willdurand/geocoder": "^3.0",
         "geoip2/geoip2": "^2.3",
         "florianv/swap": "^2.2",
-        "doctrine/cache": "^1.4",
         "zf1/zend-locale": "^1.12",
         "zf1/zend-currency": "^1.12"
     },
     "require-dev": {
+        "doctrine/cache": "^1.4",
         "phpspec/phpspec": "^2.2"
+    },
+    "suggest": {
+        "doctrine/cache": "^1.4"
     },
     "config": {
         "bin-dir": "bin"
