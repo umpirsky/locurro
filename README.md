@@ -13,6 +13,8 @@ Here is one example of showing approximate price under the brackets:
 ![us](img/us.png)
 ![fr](img/fr.png)
 
+And it automatically detects users default currency based on their IP address for example.
+
 Pretty cool, huh? :smile:
 
 ## Basic Usage
@@ -20,6 +22,8 @@ Pretty cool, huh? :smile:
 ### Convert based on currency
 
 ```php
+<?php
+
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     new Money\Currency('RSD')
@@ -32,6 +36,8 @@ Full example in [examples/currency.php](https://github.com/umpirsky/locurro/blob
 ### Convert based on locale
 
 ```php
+<?php
+
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     'sr-Cyrl-RS'
@@ -44,6 +50,8 @@ Full example in [examples/locale.php](https://github.com/umpirsky/locurro/blob/m
 ### Convert based on country
 
 ```php
+<?php
+
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     'RS'
@@ -56,6 +64,8 @@ Full example in [examples/country.php](https://github.com/umpirsky/locurro/blob/
 ### Convert based on IP address
 
 ```php
+<?php
+
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     '109.92.115.78'
