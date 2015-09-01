@@ -24,6 +24,7 @@ Pretty cool, huh? :smile:
 ```php
 <?php
 
+/* @var $converter Locurro\Converter\Currency */
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     new Money\Currency('RSD')
@@ -38,6 +39,7 @@ Full example in [examples/currency.php](https://github.com/umpirsky/locurro/blob
 ```php
 <?php
 
+/* @var $converter Locurro\Converter\Locale */
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     'sr-Cyrl-RS'
@@ -52,6 +54,7 @@ Full example in [examples/locale.php](https://github.com/umpirsky/locurro/blob/m
 ```php
 <?php
 
+/* @var $converter Locurro\Converter\Country */
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     'RS'
@@ -66,6 +69,7 @@ Full example in [examples/country.php](https://github.com/umpirsky/locurro/blob/
 ```php
 <?php
 
+/* @var $converter Locurro\Converter\IpAddress */
 $converter->convert(
     new Money\Money(100, new Money\Currency('EUR')),
     '109.92.115.78'
