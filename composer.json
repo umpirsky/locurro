@@ -20,10 +20,12 @@
     },
     "require-dev": {
         "doctrine/cache": "^1.4",
+        "twig/twig": "^1.21",
         "phpspec/phpspec": "^2.2"
     },
     "suggest": {
-        "doctrine/cache": "^1.4"
+        "doctrine/cache": "^1.4",
+        "twig/twig": "^1.21"
     },
     "config": {
         "bin-dir": "bin"
@@ -33,7 +35,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1-dev"
+            "dev-master": "0.2-dev"
         }
     }
 }
