@@ -2,7 +2,7 @@
     "name": "umpirsky/locurro",
     "type": "library",
     "description": "Local currency converter.",
-    "license": "propertary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Saša Stamenković",
