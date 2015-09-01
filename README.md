@@ -112,3 +112,7 @@ You can chain them, see example in [examples/ip-chained.php](https://github.com/
 You can cache exchange rates using Doctrine cache or Illuminate cache.
 
 Example is available in [examples/ip-cached.php](https://github.com/umpirsky/locurro/blob/master/examples/ip-cached.php).
+
+### Twig integration
+
+There is a Twig extension provded in the source code.
